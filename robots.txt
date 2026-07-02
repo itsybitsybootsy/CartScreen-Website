@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.keycart.at/sitemap.xml
+Sitemap: https://www.cartscreen.at/sitemap.xml

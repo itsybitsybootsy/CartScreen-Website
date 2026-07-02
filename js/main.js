@@ -73,13 +73,13 @@
         "Organisation / Filiale: " + (val("kf-org") || "—") + "\n\n" +
         val("kf-msg") + "\n";
       window.location.href =
-        "mailto:team.keycart@gmail.com?subject=" +
+        "mailto:team.cartscreen@gmail.com?subject=" +
         encodeURIComponent("CartScreen-Anfrage von " + name) +
         "&body=" + encodeURIComponent(body);
       if (status) {
         status.hidden = false;
         status.textContent =
-          "Ihr E-Mail-Programm wurde geöffnet. Falls nicht, schreiben Sie bitte direkt an team.keycart@gmail.com.";
+          "Ihr E-Mail-Programm wurde geöffnet. Falls nicht, schreiben Sie bitte direkt an team.cartscreen@gmail.com.";
       }
     });
   }

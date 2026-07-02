@@ -469,7 +469,7 @@ a.bento__box:hover .bento__more svg { transform: translateX(3px); }
 /* Avatar — einheitliches Format für Foto ODER Initialen (alle drei Gründer gleich).
    Für ein Foto: <img class="member__av" src="assets/img/team/NAME.jpg" alt="Vorname Nachname" width="112" height="112" />
    Für Initialen: <span class="member__av">XX</span>  — Bild bitte quadratisch (z. B. 512x512), Kopf/Schultern zentriert. */
-.member__av { width:112px; height:112px; border-radius:28px; display:grid; place-items:center; font-family:var(--display); font-weight:700; font-size:2.3rem; color:#fff; background:linear-gradient(150deg,var(--green-deep),var(--green) 55%,var(--mint)); margin-bottom:1.2rem; }
+.member__av { width:100%; max-width:260px; aspect-ratio:1/1; height:auto; border-radius:var(--r-lg); display:grid; place-items:center; font-family:var(--display); font-weight:700; font-size:clamp(3rem,7vw,3.6rem); color:#fff; background:linear-gradient(150deg,var(--green-deep),var(--green) 55%,var(--mint)); margin-bottom:1.3rem; }
 .member h3 { font-family:var(--display); font-weight:600; font-size:1.3rem; }
 .member__role { display:block; font-size:.95rem; color:var(--green-deep); font-weight:600; margin-top:.2rem; }
 .member p { margin-top:.7rem; color:var(--ink-2); font-size:.95rem; }

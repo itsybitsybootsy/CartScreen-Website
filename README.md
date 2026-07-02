@@ -63,11 +63,11 @@ App und Web dieselbe Sprache sprechen:
 ## PCB-Renderings
 
 Die Bilder unter `assets/renders/` sind **echte Renderings aus den KiCad-Daten**
-(`hardware/keycart_v1/keycart_v1.kicad_pcb`), erzeugt mit `kicad-cli` (KiCad 10).
+(`hardware/cartscreen_v1/cartscreen_v1.kicad_pcb`), erzeugt mit `kicad-cli` (KiCad 10).
 Keine Fotos — die Platine ist noch nicht gefertigt. Reproduzieren:
 
 ```bash
-PCB=../hardware/keycart_v1/keycart_v1.kicad_pcb
+PCB=../hardware/cartscreen_v1/cartscreen_v1.kicad_pcb
 OUT=assets/renders
 
 # Hero (isometrisch, mit Boden-Schatten)
@@ -81,7 +81,7 @@ kicad-cli pcb render -o $OUT/pcb-hero.png  -w 2400 -h 1800 --side top \
 
 ## Noch vom Team zu bestätigen (Platzhalter)
 
-- **Kontakt-Mail** — gesetzt auf `team.keycart@gmail.com` (CTA-Sektion, erledigt).
+- **Kontakt-Mail** — gesetzt auf `team.cartscreen@gmail.com` (CTA-Sektion, erledigt).
 - **Team-Rollen** (Hardware / Produkt / App) sind aus dem Repo abgeleitet, bitte gegenchecken.
 - Optional eigene **Domain** + OG-Vorschaubild ergänzen.
 
