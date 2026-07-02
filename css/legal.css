@@ -1,5 +1,5 @@
 /* ============================================================
-   KeyCart — legal.css
+   CartScreen — legal.css
    Rechtsseiten (Impressum / Datenschutz).
    ============================================================ */
 .legal { max-width: 780px; margin: 0 auto; padding: clamp(96px,13vh,150px) var(--pad) 6rem; }

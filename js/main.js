@@ -1,4 +1,4 @@
-/* KeyCart — interactions. Vanilla, no deps. Respects reduced-motion.
+/* CartScreen — interactions. Vanilla, no deps. Respects reduced-motion.
    Wird auf allen Seiten geladen; Effekte ohne passendes Element werden
    übersprungen (Null-Checks), daher unbedenklich pro Seite. */
 (function () {
@@ -74,7 +74,7 @@
         val("kf-msg") + "\n";
       window.location.href =
         "mailto:team.keycart@gmail.com?subject=" +
-        encodeURIComponent("KeyCart-Anfrage von " + name) +
+        encodeURIComponent("CartScreen-Anfrage von " + name) +
         "&body=" + encodeURIComponent(body);
       if (status) {
         status.hidden = false;

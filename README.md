@@ -1,6 +1,6 @@
-# KeyCart — Website
+# CartScreen — Website
 
-Die öffentliche Landingpage für KeyCart: der münzfreie, app-verbundene Einkaufswagen.
+Die öffentliche Landingpage für CartScreen: der münzfreie, app-verbundene Einkaufswagen.
 Inhaltlich auf die fünf V1-Funktionen ausgerichtet (Laden per Stecker, Entsperren per
 Display/App, Werbung + Orientierung, Alarm, Standort-Tracking — siehe `../docs/PRODUCT.md`).
 Eine statische Seite ohne Build-Schritt — reines HTML/CSS/JS.
@@ -49,7 +49,7 @@ laden `base.css` + `legal.css`.
 
 ## Design
 
-Das visuelle System ist aus der KeyCart-iOS-App abgeleitet (`/KeyCart/Theme.swift`), damit
+Das visuelle System ist aus der CartScreen-iOS-App abgeleitet (`/CartScreen/Theme.swift`), damit
 App und Web dieselbe Sprache sprechen:
 
 - **Farben** — warmes Creme (`#F7F6F2`), Tannengrün → Mint (`#0F5941`→`#34D399`),
