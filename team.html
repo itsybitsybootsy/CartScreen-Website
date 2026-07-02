@@ -40,7 +40,7 @@
     </span>
     <span class="nav__word">Key<span>Cart</span></span>
   </a>
-  <nav class="nav__links" aria-label="Hauptnavigation">
+  <nav class="nav__links" id="nav-links" aria-label="Hauptnavigation">
     <a href="index.html">Start</a>
     <a href="problem-loesung.html">Problem &amp; Lösung</a>
     <a href="modul-analytik.html">Modul &amp; Analytik</a>
@@ -48,6 +48,9 @@
     <a href="team.html" aria-current="page">Team</a>
   </nav>
   <a href="kontakt.html" class="btn btn--solid nav__cta">Pilot anfragen</a>
+  <button type="button" class="nav__toggle" id="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-links">
+    <span></span><span></span><span></span>
+  </button>
 </header>
 
 <main>
@@ -71,7 +74,7 @@
         <p>Verantwortet das Board von der Schaltung über das Layout bis zur Fertigung und Inbetriebnahme.</p>
       </div>
       <div class="member reveal" style="--i:1">
-        <span class="member__av">AA</span>
+        <img class="member__av" src="assets/img/team/anatol-azizi.jpg" alt="Anatol Azizi" width="60" height="60" loading="lazy" decoding="async" />
         <h3>Anatol Azizi</h3>
         <span class="member__role">Produkt und Markt</span>
         <p>Hält die Richtung: was gebaut wird, für wen, und wie es in die erste Filiale kommt.</p>

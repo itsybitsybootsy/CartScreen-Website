@@ -47,7 +47,7 @@
     </span>
     <span class="nav__word">Key<span>Cart</span></span>
   </a>
-  <nav class="nav__links" aria-label="Hauptnavigation">
+  <nav class="nav__links" id="nav-links" aria-label="Hauptnavigation">
     <a href="index.html">Start</a>
     <a href="problem-loesung.html" aria-current="page">Problem &amp; Lösung</a>
     <a href="modul-analytik.html">Modul &amp; Analytik</a>
@@ -55,6 +55,9 @@
     <a href="team.html">Team</a>
   </nav>
   <a href="kontakt.html" class="btn btn--solid nav__cta">Pilot anfragen</a>
+  <button type="button" class="nav__toggle" id="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="nav-links">
+    <span></span><span></span><span></span>
+  </button>
 </header>
 
 <main>
@@ -155,14 +158,14 @@
         <h3>Laden &amp; Flotten-Betrieb</h3>
         <p>Geladen wird per Stecker über einen Anschluss oben am Modul. Eine Sammelstation in der Filiale bündelt Live-Inventar, Akku-Gesundheit und Firmware-Updates. Eine Internet-Anbindung pro Filiale, kein Mobilfunk pro Wagen.</p>
       </div>
-      <div class="bento__box reveal" style="--i:5">
+      <div class="bento__box bento__box--wide reveal" style="--i:5">
         <span class="bento__ic">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg>
         </span>
         <h3>Alarm bei Diebstahl</h3>
         <p>Verlässt ein Wagen ohne aktive Session die Ausgangsschleuse oder wird er manipuliert, schlägt das Modul akustisch und sichtbar Alarm. Optional sperrt ein Rad.</p>
       </div>
-      <div class="bento__box reveal" style="--i:6">
+      <div class="bento__box bento__box--wide reveal" style="--i:6">
         <span class="bento__ic">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M7 7a5 5 0 0 0 0 10M17 7a5 5 0 0 1 0 10"/><circle cx="12" cy="12" r="2.4"/></svg>
         </span>
