@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>CartScreen · Münzfreier Einkaufswagen als Nachrüst-Modul</title>
-<meta name="description" content="CartScreen rüstet bestehende Einkaufswagen nach: Laden per Stecker, Entsperren per Display oder App, ein Farbdisplay für Werbung und Orientierung, Alarm bei Diebstahl und Standort-Tracking. Ein Modul am Holm, kein neuer Wagen. Aus Wien." />
+<meta name="description" content="CartScreen digitalisiert bestehende Einkaufswagen: münzfrei entsperren per Display, App oder Karte, ein Farbdisplay für Werbung und Orientierung, Standort-Tracking, Alarm bei Diebstahl und Laden per Stecker. Ein Nachrüst-Modul an der Griffstange, kein neuer Wagen. Aus Wien." />
 <meta property="og:title" content="CartScreen · Münzfreier Einkaufswagen als Nachrüst-Modul" />
 <meta property="og:description" content="Der münzfreie, app-verbundene Einkaufswagen als Nachrüst-Kit. Aus Österreich." />
 <meta property="og:type" content="website" />
@@ -71,10 +71,10 @@
 <!-- ====================== HERO ====================== -->
 <section class="hero">
   <div class="hero__inner">
-    <h1 class="reveal" style="--i:0">Schluss mit dem<br/><em>Pfandchip.</em></h1>
+    <h1 class="reveal" style="--i:0">Einkaufswagen,<br/>jetzt <em>digital.</em></h1>
     <p class="hero__sub reveal" style="--i:1">
-      Das Nachrüst-Kit für Einkaufswagen aus Wien. Klemmt an den Holm und macht jeden
-      bestehenden Wagen münzfrei und app-verbunden. Kein neuer Wagen.
+      Ein Nachrüst-Modul aus Wien macht bestehende Wagen münzfrei und
+      app-verbunden. Kein neuer Wagen.
     </p>
     <div class="hero__links reveal" style="--i:2">
       <a href="#funktionen" class="link">Mehr erfahren
@@ -87,68 +87,117 @@
   </div>
 
   <div class="hero__art reveal" style="--i:3">
-    <svg class="cart-svg" viewBox="0 0 560 430" role="img" aria-label="Einkaufswagen mit CartScreen-Modul am Holm">
+    <svg class="cart-svg" viewBox="0 0 640 470" role="img" aria-label="CartScreen-Modul, montiert an der Griffstange eines Einkaufswagens">
       <defs>
-        <linearGradient id="mod" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#0F5941"/>
-          <stop offset="0.6" stop-color="#1F7A5C"/>
-          <stop offset="1" stop-color="#34D399"/>
+        <radialGradient id="glow" cx="50%" cy="40%" r="58%">
+          <stop offset="0" stop-color="#34D399" stop-opacity="0.16"/>
+          <stop offset="58%" stop-color="#34D399" stop-opacity="0.05"/>
+          <stop offset="100%" stop-color="#34D399" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#eef1f4"/>
+          <stop offset="0.16" stop-color="#ffffff"/>
+          <stop offset="0.36" stop-color="#d3d9df"/>
+          <stop offset="0.64" stop-color="#a9b1bb"/>
+          <stop offset="1" stop-color="#79818b"/>
         </linearGradient>
-        <clipPath id="basketClip">
-          <path d="M176 150 L470 126 L446 238 L206 266 Z"/>
-        </clipPath>
+        <linearGradient id="enc" x1="0.05" y1="0" x2="0.92" y2="1">
+          <stop offset="0" stop-color="#2c6e55"/>
+          <stop offset="0.5" stop-color="#16493a"/>
+          <stop offset="1" stop-color="#0a2c22"/>
+        </linearGradient>
+        <linearGradient id="bracket" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#454f4a"/>
+          <stop offset="1" stop-color="#161d1a"/>
+        </linearGradient>
+        <linearGradient id="scr" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#ffffff"/>
+          <stop offset="1" stop-color="#e8f3ee"/>
+        </linearGradient>
+        <filter id="ds" x="-40%" y="-40%" width="180%" height="180%">
+          <feDropShadow dx="0" dy="13" stdDeviation="16" flood-color="#0a3024" flood-opacity="0.26"/>
+        </filter>
+        <filter id="dsTube" x="-20%" y="-80%" width="140%" height="300%">
+          <feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#0a3024" flood-opacity="0.12"/>
+        </filter>
       </defs>
 
-      <ellipse cx="300" cy="400" rx="210" ry="15" fill="#0E1A14" opacity="0.05"/>
+      <!-- soft brand glow + grounding shadow -->
+      <ellipse cx="320" cy="196" rx="288" ry="196" fill="url(#glow)"/>
+      <ellipse cx="322" cy="440" rx="214" ry="13" fill="#0E1A14" opacity="0.05"/>
 
-      <g fill="none" stroke="#1d3a2e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M62 92 H188" />
-        <path d="M182 94 L186 152" />
-        <path d="M120 96 L176 150" opacity="0.6"/>
-        <path d="M176 150 L470 126 L446 238 L206 266 Z" stroke-width="7"/>
-        <path d="M210 266 L196 350" />
-        <path d="M446 238 L432 350" />
-        <path d="M196 350 H432" />
-        <path d="M224 296 L420 284" opacity="0.55"/>
+      <!-- handle-bar tubes sweeping down out of frame (cart frame) -->
+      <g fill="none" stroke-linecap="round">
+        <path d="M154 300 C 150 360 168 422 196 470" stroke="#9aa2ab" stroke-width="22"/>
+        <path d="M486 300 C 490 360 472 422 444 470" stroke="#9aa2ab" stroke-width="22"/>
+        <path d="M154 300 C 150 360 168 422 196 470" stroke="#e6eaee" stroke-width="8"/>
+        <path d="M486 300 C 490 360 472 422 444 470" stroke="#e6eaee" stroke-width="8"/>
       </g>
 
-      <g clip-path="url(#basketClip)" stroke="#1F7A5C" stroke-width="2.4" opacity="0.4">
-        <path d="M210 110 L210 280"/><path d="M242 108 L242 280"/>
-        <path d="M274 106 L274 280"/><path d="M306 104 L306 280"/>
-        <path d="M338 102 L338 280"/><path d="M370 100 L370 280"/>
-        <path d="M402 98 L402 280"/><path d="M434 96 L434 280"/>
-        <path d="M170 178 L480 156"/><path d="M174 210 L470 190"/>
-      </g>
+      <!-- push-handle bar (steel grip) -->
+      <rect x="92" y="286" width="456" height="34" rx="17" fill="url(#steel)" filter="url(#dsTube)"/>
+      <rect x="106" y="291" width="428" height="6" rx="3" fill="#ffffff" opacity="0.6"/>
+      <rect x="106" y="310" width="428" height="5" rx="2.5" fill="#5e666f" opacity="0.4"/>
 
-      <g>
-        <circle cx="196" cy="362" r="29" fill="#0E1A14" opacity="0.88"/>
-        <circle cx="196" cy="362" r="11" fill="#fff"/>
-        <circle cx="432" cy="362" r="29" fill="#0E1A14" opacity="0.88"/>
-        <circle cx="432" cy="362" r="11" fill="#fff"/>
-      </g>
+      <!-- mount bracket clamping the bar, tapered neck up to the module -->
+      <path d="M298 250 H370 L360 292 H308 Z" fill="url(#bracket)"/>
+      <rect x="290" y="278" width="88" height="49" rx="16" fill="url(#bracket)"/>
+      <rect x="298" y="283" width="72" height="5" rx="2.5" fill="#6b7a72" opacity="0.5"/>
+      <circle cx="307" cy="303" r="3.4" fill="#0c1411"/>
+      <circle cx="361" cy="303" r="3.4" fill="#0c1411"/>
 
-      <g transform="rotate(-4 150 78)">
-        <rect x="120" y="86" width="116" height="18" rx="9" fill="#0F5941" opacity="0.4"/>
-        <rect x="118" y="50" width="120" height="48" rx="13" fill="url(#mod)"/>
-        <rect x="118.7" y="50.7" width="118.6" height="46.6" rx="12.3" fill="none" stroke="#fff" stroke-opacity="0.25"/>
-        <rect x="128" y="58" width="78" height="32" rx="5" fill="#fff"/>
-        <rect x="128" y="58" width="78" height="9" rx="5" fill="#1F7A5C" opacity="0.9"/>
-        <circle cx="200" cy="85" r="2.4" fill="#F59E0B"/>
-        <g stroke="#1F7A5C" stroke-width="2" stroke-linecap="round" fill="none">
-          <path d="m134 75 5 5 9-11"/>
+      <!-- ============ CartScreen module (the product) ============ -->
+      <g transform="translate(196 104) rotate(-4)">
+        <!-- enclosure -->
+        <rect x="0" y="0" width="250" height="150" rx="24" fill="url(#enc)" filter="url(#ds)"/>
+        <rect x="2" y="2" width="246" height="146" rx="22" fill="none" stroke="#000" stroke-opacity="0.14"/>
+        <rect x="16" y="7" width="218" height="5" rx="2.5" fill="#7ad6af" opacity="0.5"/>
+
+        <!-- USB-C charge port on the top edge (Laden per Stecker) -->
+        <rect x="105" y="-7" width="40" height="11" rx="5.5" fill="#06160f"/>
+        <rect x="110" y="-4.5" width="30" height="3.2" rx="1.6" fill="#214437"/>
+        <circle cx="158" cy="-1.5" r="2.4" fill="#F59E0B"/>
+
+        <!-- screen -->
+        <rect x="22" y="20" width="206" height="92" rx="13" fill="url(#scr)"/>
+        <rect x="22" y="20" width="206" height="92" rx="13" fill="none" stroke="#000" stroke-opacity="0.16" stroke-width="1.6"/>
+
+        <text x="37" y="40" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="9" letter-spacing="0.5" fill="#8aa99d" font-weight="700">CARTSCREEN</text>
+        <g transform="translate(193 31)">
+          <rect x="0" y="0" width="17" height="9" rx="2.2" fill="none" stroke="#a7bcb2" stroke-width="1.3"/>
+          <rect x="17.6" y="2.6" width="2.2" height="3.8" rx="1" fill="#a7bcb2"/>
+          <rect x="1.7" y="1.7" width="10.5" height="5.6" rx="1" fill="#34D399"/>
         </g>
-        <text x="152" y="72" font-family="JetBrains Mono, monospace" font-size="7.5" fill="#0E1A14" font-weight="600">ENTSPERRT</text>
-        <rect x="134" y="81" width="64" height="2.4" rx="1.2" fill="#C9D8CE"/>
-        <circle cx="222" cy="74" r="5" fill="#34D399"/>
-        <circle cx="222" cy="74" r="5" fill="none" stroke="#34D399" stroke-opacity="0.5">
-          <animate attributeName="r" values="5;11;5" dur="2.6s" repeatCount="indefinite"/>
+
+        <!-- unlock badge -->
+        <circle cx="60" cy="73" r="23" fill="#1F8A66"/>
+        <circle cx="60" cy="73" r="23" fill="none" stroke="#34D399" stroke-opacity="0.45" stroke-width="2"/>
+        <g transform="translate(60 73)" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M-7 -2 V-9 a7 7 0 0 1 13 -2.5"/>
+          <rect x="-9" y="-2" width="18" height="14" rx="3.2" fill="#fff" stroke="none"/>
+          <circle cx="0" cy="5" r="2" fill="#1F8A66" stroke="none"/>
+        </g>
+
+        <text x="96" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="-0.4" fill="#143529">Entsperrt</text>
+        <text x="97" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="9.5" fill="#5d7d71">Virtuelles Pfand vorgemerkt</text>
+
+        <!-- lower bezel: speaker grille (alarm) + status LED -->
+        <g fill="#06170f">
+          <circle cx="32" cy="131" r="1.8"/><circle cx="40" cy="131" r="1.8"/><circle cx="48" cy="131" r="1.8"/><circle cx="56" cy="131" r="1.8"/>
+        </g>
+        <text x="125" y="135" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="8" letter-spacing="1.4" fill="#5fae8c" opacity="0.75">KC&#183;01</text>
+        <circle cx="226" cy="131" r="4" fill="#34D399"/>
+        <circle cx="226" cy="131" r="4" fill="none" stroke="#34D399" stroke-opacity="0.5">
+          <animate attributeName="r" values="4;9;4" dur="2.6s" repeatCount="indefinite"/>
           <animate attributeName="stroke-opacity" values="0.5;0;0.5" dur="2.6s" repeatCount="indefinite"/>
         </circle>
       </g>
 
-      <g fill="none" stroke="#34D399" stroke-width="3" stroke-linecap="round" transform="translate(96 36)">
-        <path d="M0 28 a18 18 0 0 0 -16 -10" opacity="0.85"><animate attributeName="opacity" values="0.2;0.85;0.2" dur="2.4s" repeatCount="indefinite"/></path>
-        <path d="M-2 18 a30 30 0 0 0 -26 -16" opacity="0.55"><animate attributeName="opacity" values="0.1;0.55;0.1" dur="2.4s" begin="0.3s" repeatCount="indefinite"/></path>
+      <!-- connectivity signal -->
+      <g fill="none" stroke="#34D399" stroke-width="3" stroke-linecap="round" transform="translate(452 92)">
+        <path d="M0 -22 a18 18 0 0 1 16 10"><animate attributeName="opacity" values="0.25;0.9;0.25" dur="2.4s" repeatCount="indefinite"/></path>
+        <path d="M3 -32 a30 30 0 0 1 26 16"><animate attributeName="opacity" values="0.12;0.6;0.12" dur="2.4s" begin="0.3s" repeatCount="indefinite"/></path>
+        <path d="M6 -42 a42 42 0 0 1 36 22"><animate attributeName="opacity" values="0.08;0.4;0.08" dur="2.4s" begin="0.6s" repeatCount="indefinite"/></path>
       </g>
     </svg>
   </div>
@@ -156,7 +205,7 @@
 
 <!-- ====================== STATEMENT ====================== -->
 <section class="statement">
-  <p class="reveal">Ein Modul am Holm.<br/><em>Kein neuer Wagen.</em></p>
+  <p class="reveal">Aus der Pfandmünze<br/><em>wird ein Tippen.</em></p>
 </section>
 
 <!-- ====================== FÜNF FUNKTIONEN (Bento) ====================== -->
@@ -164,41 +213,41 @@
   <div class="wrap">
     <div class="sec__head">
       <h2 class="reveal">Fünf Funktionen.</h2>
-      <p class="reveal" style="--i:1">Der erste Prototyp am Wagen. Ein Modul am Holm, kein neuer Wagen.</p>
+      <p class="reveal" style="--i:1">Was das Nachrüst-Modul am Einkaufswagen leistet, im ersten Prototyp.</p>
     </div>
 
     <div class="bento">
       <a class="bento__box bento__box--wide reveal" href="problem-loesung.html#loesung">
         <span class="bento__n">01</span>
-        <span class="bento__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span>
-        <h3>Laden per Stecker</h3>
-        <p>Ein Ladeanschluss oben am Modul. Einfach einstecken und laden, der Akku bleibt im Modul, kein Akkuwechsel.</p>
-        <span class="bento__more">Zur Lösung <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></span>
-      </a>
-      <a class="bento__box bento__box--wide reveal" href="problem-loesung.html#loesung">
-        <span class="bento__n">02</span>
         <span class="bento__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
-        <h3>Entsperren per Display &amp; App</h3>
-        <p>Münzfrei: am Farbdisplay tippen, über die App per Bluetooth oder mit einer Karte. Virtuelles Pfand statt Euro-Münze.</p>
+        <h3>Münzfrei entsperren</h3>
+        <p>Am Farbdisplay tippen, über die App per Bluetooth oder kontaktlos mit Karte. Virtuelles Pfand statt Euro-Münze.</p>
         <span class="bento__more">Zur Lösung <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></span>
       </a>
-      <a class="bento__box reveal" href="modul-analytik.html#modul">
-        <span class="bento__n">03</span>
+      <a class="bento__box bento__box--wide reveal" href="modul-analytik.html#modul">
+        <span class="bento__n">02</span>
         <span class="bento__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
         <h3>Werbung &amp; Orientierung</h3>
         <p>Ein Farbdisplay am Wagen: Angebote für den Handel, Lageplan und „wo ist…" für die Kundschaft.</p>
       </a>
-      <a class="bento__box reveal" href="faq.html">
-        <span class="bento__n">04</span>
-        <span class="bento__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg></span>
-        <h3>Alarm</h3>
-        <p>Verlässt ein Wagen ohne Session die Schleuse oder wird manipuliert, gibt das Modul Alarm, hörbar und sichtbar.</p>
-      </a>
       <a class="bento__box reveal" href="modul-analytik.html#analytik">
-        <span class="bento__n">05</span>
+        <span class="bento__n">03</span>
         <span class="bento__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
         <h3>Standort-Tracking</h3>
         <p>Jeder Wagen meldet anonym seine Zone über Bluetooth-Anker, IMU und Rad-Odometrie. Kameralos, für Wagen-Suche und Wärmekarten.</p>
+        <span class="bento__more">Zur Analytik <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6 6 6-6 6"/></svg></span>
+      </a>
+      <a class="bento__box reveal" href="faq.html">
+        <span class="bento__n">04</span>
+        <span class="bento__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg></span>
+        <h3>Alarm bei Diebstahl</h3>
+        <p>Verlässt ein Wagen ohne aktive Session die Schleuse oder wird er manipuliert, schlägt das Modul akustisch und sichtbar Alarm.</p>
+      </a>
+      <a class="bento__box reveal" href="faq.html">
+        <span class="bento__n">05</span>
+        <span class="bento__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6z"/></svg></span>
+        <h3>Laden per Stecker</h3>
+        <p>Ein Ladeanschluss oben am Modul. Einstecken und laden, der Akku bleibt im Modul, kein Wechsel.</p>
       </a>
     </div>
   </div>
@@ -239,7 +288,7 @@
   <h2 class="reveal">Pilotfiliale, Partner<br/>oder Investor?</h2>
   <p class="reveal" style="--i:1">Wir suchen eine erste Filiale für den Pilotbetrieb sowie Partner und Investoren. Eine kurze Nachricht genügt, wir melden uns persönlich zurück.</p>
   <div class="cta__row reveal" style="--i:2">
-    <a href="mailto:team.cartscreen@gmail.com" class="btn btn--solid btn--lg">team.cartscreen@gmail.com</a>
+    <a href="mailto:info.cartscreen@gmail.com" class="btn btn--solid btn--lg">info.cartscreen@gmail.com</a>
     <a href="kontakt.html" class="btn btn--ghost btn--lg">Zur Kontaktseite</a>
   </div>
 </section>
@@ -274,7 +323,7 @@
     </div>
     <div class="foot__base">
       <span>© 2026 CartScreen · Wien, Österreich</span>
-      <a href="mailto:team.cartscreen@gmail.com">team.cartscreen@gmail.com</a>
+      <a href="mailto:info.cartscreen@gmail.com">info.cartscreen@gmail.com</a>
     </div>
   </div>
 </footer>
